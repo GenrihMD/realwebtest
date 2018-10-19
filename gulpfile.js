@@ -36,7 +36,7 @@ var srcPaths = {
     '!./src/styles/**/*',
     '!./src/img/**/*',
     '!./src/app/**/*',
-    '!./src/**/*.pug',
+    '!./src/**/*.pug'
   ]
 };
 
@@ -59,8 +59,7 @@ gulp.task('pug', function () {
 gulp.task('images', function () {
   gulp.src(srcPaths.images)
     .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
-    .pipe(gulp.dest(path_www + path_www_theme + 'images/'))
-    .pipe(gulp.dest(path_dist + 'images/'));
+    .pipe(gulp.dest('./dist/img/'));
 });
 
 gulp.task('copy', function () {
