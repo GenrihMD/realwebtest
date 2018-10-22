@@ -1,3 +1,4 @@
+include products
 html(lang=ru)
     head
         title Каталог
@@ -8,16 +9,20 @@ html(lang=ru)
     body
         .container
             .catalog
-                .product-card
-                    .product-gallery
-                        .product-gallery__left-arrow
-                        .product-gallery__slides
-                            .slide
-                                img
-                        .product-gallery__right-arrow
-                    p.product-card__article
-                    p.product-card__name
-                    ul.product-card__features
-                        li.feature
-                            span.feature__name
-                            span.feature__value
+                each product in products
+                    .product-card
+                        .product-gallery
+                            .product-gallery__left-arrow
+                            .product-gallery__slides
+                            .product-gallery__slide
+                                each photo in product.photos
+                                    img(src=photo)
+                            .product-gallery__right-arrow
+                        p.product-card__articul= product.articul
+                        p.product-card__name= product.name
+                        each feature in product.features
+                            ul.product-card__features
+                                li.feature
+                                    span.feature__name= feature.name
+                                    span.feature__value= feature.value
+                        .product-card__button ПОДРОБНЕЕ
