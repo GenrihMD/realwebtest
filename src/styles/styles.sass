@@ -6,14 +6,60 @@
   margin: 0 auto
 
 .catalog
+  padding-top: 70px
+  padding-bottom: 100px
   display: flex
   justify-content: space-between
   flex-wrap: wrap
 
 .product-card
   position: relative
+  padding-top: 0
   width: 260px
-  &__article
+  height: 460px
+  margin: 0 auto
+  &__wrapper
+    position: absolute
+    width: 260px
+    top: 0
+    left: 0
+    transition: all 0.3s
+    overflow: hidden
+  &__labels
+    position: absolute
+    width: 100%
+    display: flex
+    top: 15px
+    left: 10px
+  &__label-new,
+  &__label-sale,
+  &__label-hit
+    width: 37px
+    height: 37px
+    border-radius: 19px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #000000
+    font-family: Roboto
+    font-size: 10px
+    font-weight: 300
+    line-height: 24px
+    text-transform: uppercase
+  &__label-new
+    order: 2  
+    margin-left: 8px
+    background-color: #ba68c8
+  &__label-sale
+    order: 3
+    margin-left: 8px
+    background-color: #e57373
+  &__label-hit
+    order: 1
+    background-color: #ffd54f
+  &__description
+    padding: 27px 0 37px
+  &__articul
     color: #8b9399
     font-family: Roboto
     font-size: 12px
@@ -27,12 +73,52 @@
     line-height: 24px
   &__features
   &__button
+    display: none
+    cursor: pointer
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 0
+    overflow hidden
+    background-color: #ffd54f
+    color: #000000
+    font-family: "Roboto"
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    transition all .4s
 
-product-gallery
+  &:hover
+    padding-top: 30px
+    z-index: 200
+    .product-card
+      &__description
+        padding-left: 54px
+        padding-right: 54px
+      &__wrapper
+        width: 360px
+        background-color: #f5f6fa
+        box-shadow: 0 0 60px rgba(94, 105, 150, 0.2)
+        top: -30px
+        left: -53px
+      &__button
+        display: flex
+        height: 74px
+
+.product-gallery
+  background-color: #f5f6fa 
+  padding-top: 34px
   &__left-arrow
     background-image: url()
   &__slides
   &__slide
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: center
+    align-items: center
   &__right-arrow
 
 .feature
