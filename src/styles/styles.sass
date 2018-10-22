@@ -27,6 +27,7 @@
     overflow: hidden
   &__labels
     position: absolute
+    z-index: 2000
     width: 100%
     display: flex
     top: 15px
@@ -71,6 +72,8 @@
     font-size: 14px
     font-weight: 300
     line-height: 24px
+    padding-top: 15px
+    padding-bottom: 27px
   &__features
   &__button
     display: none
@@ -108,18 +111,31 @@
 .product-gallery
   background-color: #f5f6fa 
   padding-top: 34px
+  display: flex
+  justify-content: space-between
+  padding: 15px
   &__left-arrow
-    background-image: url()
+    background-image: url('/img/product-gallery__left-arrow.png')
+    background-position: center center
+    background-repeat: no-repeat
+    cursor: pointer
+    width: 32px
   &__slides
+    width: 227px
   &__slide
     display: -webkit-flex
     display: -moz-flex
     display: -ms-flex
     display: -o-flex
-    display: flex
+    display: flex!important
     justify-content: center
     align-items: center
   &__right-arrow
+    background-image: url('/img/product-gallery__right-arrow.png')
+    background-position: center center
+    background-repeat: no-repeat
+    cursor: pointer
+    width: 32px
 
 .feature
   font-family: Roboto

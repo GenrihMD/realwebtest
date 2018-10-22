@@ -24,9 +24,9 @@ html(lang=ru)
                             .product-gallery
                                 .product-gallery__left-arrow
                                 .product-gallery__slides
-                                .product-gallery__slide
                                     each photo in product.photos
-                                        img(src=photo)
+                                      .product-gallery__slide
+                                         img(src=photo)
                                 .product-gallery__right-arrow
                             .product-card__description        
                                 p.product-card__articul= product.articul
