@@ -11,18 +11,29 @@ html(lang=ru)
             .catalog
                 each product in products
                     .product-card
-                        .product-gallery
-                            .product-gallery__left-arrow
-                            .product-gallery__slides
-                            .product-gallery__slide
-                                each photo in product.photos
-                                    img(src=photo)
-                            .product-gallery__right-arrow
-                        p.product-card__articul= product.articul
-                        p.product-card__name= product.name
-                        each feature in product.features
-                            ul.product-card__features
-                                li.feature
-                                    span.feature__name= feature.name
-                                    span.feature__value= feature.value
-                        .product-card__button ПОДРОБНЕЕ
+                        .product-card__wrapper
+                            .product-card__labels
+                                each icon in product.icons
+                                    if (icon == 'new')
+                                        .product-card__label-new NEW
+                                    if (icon == 'sale')
+                                        .product-card__label-sale SALE
+                                    if (icon == 'hit')
+                                        .product-card__label-hit HIT
+                            .product-gallery
+                                .product-gallery__left-arrow
+                                .product-gallery__slides
+                                .product-gallery__slide
+                                    each photo in product.photos
+                                        img(src=photo)
+                                .product-gallery__right-arrow
+                            .product-card__description        
+                                p.product-card__articul= product.articul
+                                p.product-card__name= product.name
+                                each feature in product.features
+                                    ul.product-card__features
+                                        li.feature
+                                            span.feature__name= feature.name
+                                            | :&nbsp;
+                                            span.feature__value= feature.value
+                            .product-card__button ПОДРОБНЕЕ
