@@ -6,6 +6,7 @@ html(lang=ru)
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(charset="utf-8")
         link(rel="stylesheet" href="/styles/styles.css")
+        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
     body
         .container
             .catalog
@@ -37,3 +38,6 @@ html(lang=ru)
                                             | :&nbsp;
                                             span.feature__value= feature.value
                             .product-card__button ПОДРОБНЕЕ
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="app/main.js")
